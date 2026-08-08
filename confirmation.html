@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bringing Art to Everything — Home</title>
+  <title>Bringing Art to Everything — Order Confirmation</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 </head>
 
 <body class="font-cfont">
-  <header>
+<header>
     <div class="bg-[#4375fd] p-3 text-center text-white text-sm md:text-lg">Free delivery on orders
       over $50
     </div>
@@ -48,13 +48,13 @@
       </a>
       <!-- Desktop Menu -->
       <ul class="hidden md:flex items-center gap-8 font-medium">
-        <li><a href="index.html" class="text-[#4375fd]">Home</a></li>
+        <li><a href="index.html" class="hover:text-[#4375fd]">Home</a></li>
         <li><a href="listings.html" class="hover:text-[#4375fd]">Listings</a></li>
         <li><a href="product.html?id=beija-flor" class="hover:text-[#4375fd]">Product</a></li>
         <li><a href="bag.html" class="hover:text-[#4375fd] relative">Bag <span data-cart-badge
               class="hidden absolute -top-2 -right-3 bg-[#4375fd] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span></a>
         </li>
-        <li><a href="confirmation.html" class="hover:text-[#4375fd]">Confirmation</a></li>
+        <li><a href="confirmation.html" class="text-[#4375fd]">Confirmation</a></li>
       </ul>
 
       <!-- Desktop Button -->
@@ -77,7 +77,7 @@
       <div id="mobile-menu" class="hidden absolute top-full left-0 w-full md:hidden bg-white shadow-lg z-10">
         <ul class="flex flex-col items-center gap-5 py-6">
           <li>
-            <a href="index.html" class="block text-lg font-medium text-[#4375fd]">
+            <a href="index.html" class="block text-lg font-medium hover:text-[#4375fd]">
               Home
             </a>
           </li>
@@ -102,7 +102,7 @@
           </li>
 
           <li>
-            <a href="confirmation.html" class="block text-lg font-medium hover:text-[#4375fd]">
+            <a href="confirmation.html" class="block text-lg font-medium text-[#4375fd]">
               Confirmation
             </a>
           </li>
@@ -116,188 +116,44 @@
       </div>
     </nav>
   </header>
-  <div class="flex justify-center px-4 py-6">
-    <div
-      class="w-full max-w-7xl h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-2xl bg-[url('https://images.unsplash.com/photo-1462917882517-e150004895fa?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex flex-col justify-center items-center text-center px-6">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24"
+        stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+      </svg>
+    </div>
 
-      <h1 class="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight">
-        Bringing Art to Everything
-      </h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Order confirmed</h1>
+    <p class="mt-3 text-gray-600 font-poppins">
+      Thanks for your order! We've sent a confirmation to your email and we're getting your coffee roasted and packed.
+    </p>
 
-      <p class="mt-4 text-white text-base sm:text-lg md:text-xl max-w-2xl font-poppins">
-        We make the best coffee in Mogadishu. Let's get brewed for you.
-      </p>
+    <div class="mt-6 inline-flex items-center gap-2 bg-blue-50 text-[#4375fd] px-5 py-2 rounded-full font-medium">
+      Order # <span id="order-number"></span>
+    </div>
+  </section>
 
+  <section id="order-summary-wrap" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="bg-white border border-gray-100 shadow-sm rounded-2xl p-6">
+      <h2 class="text-lg font-semibold mb-4">Order Summary</h2>
+      <div id="order-items" class="flex flex-col gap-4"></div>
+      <div class="border-t border-gray-200 my-4"></div>
+      <div class="flex justify-between text-gray-900 font-bold text-lg">
+        <span>Total paid</span>
+        <span id="order-total">$0.00</span>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
       <a href="listings.html"
-        class="mt-8 bg-[#4375fd] hover:bg-blue-600 transition text-white font-medium px-8 py-3 rounded-md">
-        Shop the collection
+        class="inline-block bg-[#4375fd] hover:bg-blue-600 transition text-white font-medium px-8 py-3 rounded-md">
+        Continue shopping
       </a>
-
-    </div>
-  </div>
-
-  <section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-      <!-- Heading -->
-      <h2 class="text-3xl font-bold text-center mb-12">
-        New this season
-      </h2>
-
-      <!-- Products Grid -->
-      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-      <div class="flex justify-center mt-12">
-        <a href="listings.html"
-          class="border-2 border-[#4375fd] text-[#4375fd] hover:bg-[#4375fd] hover:text-white transition font-medium px-8 py-3 rounded-md">
-          View all products
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- /*above footer*/ -->
-  <section class="bg-blue-100 py-20">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <!-- Two Columns -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 items-center">
-        <!-- Left Image -->
-        <div>
-          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200&auto=format&fit=crop"
-            alt="Coffee" class="w-full h-[400px] object-cover rounded-3xl">
-        </div>
-        <!-- Right Content -->
-        <div>
-          <p class="text-sm  text-gray-700 mb-5">
-            A Family Tradition of Rich, Aromatic Coffee
-          </p>
-
-          <h2 class="text-xl md:text-xl font-black-200 leading-tight text-gray-900 mb-8">
-            Coffee has the power to connect generations - whether it's learning
-            grandma's brewing techniques and trying to perfect them just like her
-            or the intense memories triggered by the rich flavors and aromas of
-            our favorite coffee blends.
-          </h2>
-
-          <!-- Button -->
-          <a href="listings.html" class="inline-flex items-center gap-4 group">
-
-            <div
-              class="w-7 h-7 rounded-full bg-gray-900 flex items-center justify-center group-hover:bg-black transition">
-
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="#4375fd" viewBox="0 0 20 20">
-                <path d="M6 4l10 6-10 6V4z" />
-              </svg>
-
-            </div>
-
-            <span class="text-lg text-gray-900">
-              Shop our coffees
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--/* Contacts */-->
-  <section class="max-w-7xl mx-auto px-6 py-16">
-    <h3 class="text-center text-3xl font-bold mb-12">
-      Contacts
-    </h3>
-
-    <div class="flex flex-col lg:flex-row gap-12 items-center">
-
-      <!-- Image -->
-      <div class="w-full lg:w-1/2">
-        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=1200&auto=format&fit=crop"
-          alt="Office" class="w-full h-full object-cover rounded-xl">
-      </div>
-
-      <!-- Contact Info -->
-      <div class="w-full lg:w-1/2">
-
-        <!-- Address -->
-        <h3 class="text-xl font-semibold mb-5">
-          Our Address
-        </h3>
-
-        <div class="flex gap-4 text-gray-700 mb-10">
-
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6 shrink-0">
-
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-
-          </svg>
-
-          <div>
-            <p>United Kingdom</p>
-            <p>300 Bath Street, Tay House</p>
-            <p>Glasgow G2 4JR</p>
-          </div>
-
-        </div>
-
-        <!-- Contacts -->
-        <h3 class="text-xl font-semibold mb-5">
-          Our Contacts
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- Email -->
-          <div class="flex gap-4">
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6 shrink-0">
-
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
-
-            </svg>
-
-            <div>
-              <p>Email us</p>
-              <a href="mailto:hello@example.so" class="border-b-2 border-blue-600 hover:text-blue-600">
-                hello@example.so
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Phone -->
-          <div class="flex gap-4">
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6 shrink-0">
-
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-
-            </svg>
-
-            <div>
-              <p>Call us</p>
-              <a href="tel:+44222777000" class="border-b-2 border-blue-600 hover:text-blue-600">
-                +44 222 777-000
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section>
+<section>
     <footer class="container-xl">
       <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col items-center gap-6 md:flex-row md:justify-between">
         <div class="flex justify-center md:justify-start">
@@ -372,30 +228,41 @@
       </div>
     </footer>
   </section>
+
   <script src="data.js"></script>
   <script src="script.js"></script>
   <script>
-    const FEATURED_IDS = ["beija-flor", "el-mirador", "pedra-branca", "atlantico", "beija-flor-dark", "el-mirador-decaf"];
-    const grid = document.getElementById("product-grid");
-    grid.innerHTML = FEATURED_IDS.map((id) => {
-      const p = getProduct(id);
-      return `
-        <div class="bg-white rounded-lg shadow-sm hover:shadow-lg transition overflow-hidden flex flex-col">
-          <a href="product.html?id=${p.id}" class="block">
-            <img src="${p.image}" alt="${p.name}" class="w-full aspect-square object-cover">
-          </a>
-          <div class="p-5 flex flex-col flex-1">
-            <h3 class="text-lg font-semibold text-gray-800">${p.name}</h3>
-            <p class="text-sm text-gray-500 mt-1">${p.roast}</p>
-            <p class="text-blue-600 font-bold mt-2">$${p.price.toFixed(2)}</p>
-            <a href="product.html?id=${p.id}"
-              class="mt-4 inline-block text-center border-2 border-[#4375fd] text-[#4375fd] hover:bg-[#4375fd] hover:text-white transition font-medium px-4 py-2 rounded-md">
-              View Details
-            </a>
-          </div>
+    function money(n) {
+      return `$${n.toFixed(2)}`;
+    }
+
+    const lines = cartLines();
+    const orderNumber = "CW-" + Math.floor(100000 + Math.random() * 900000);
+    document.getElementById("order-number").textContent = orderNumber;
+
+    const itemsEl = document.getElementById("order-items");
+    const summaryWrap = document.getElementById("order-summary-wrap");
+
+    if (lines.length === 0) {
+      summaryWrap.innerHTML = `
+        <div class="text-center text-gray-500 font-poppins">
+          No recent order details to show. <a href="listings.html" class="text-[#4375fd] underline">Start a new order</a>.
         </div>`;
-    }).join("");
+    } else {
+      itemsEl.innerHTML = lines.map(({ product, qty }) => `
+        <div class="flex items-center gap-4">
+          <img src="${product.image}" alt="${product.name}" class="w-14 h-14 object-cover rounded-lg">
+          <div class="flex-1">
+            <p class="font-medium text-gray-800">${product.name}</p>
+            <p class="text-sm text-gray-500">Qty ${qty}</p>
+          </div>
+          <span class="font-semibold text-gray-800">${money(product.price * qty)}</span>
+        </div>`).join("");
+      document.getElementById("order-total").textContent = money(cartSubtotal());
+      clearCart();
+    }
   </script>
+
 </body>
 
 </html>
